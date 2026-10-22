@@ -1,0 +1,19 @@
+/* Genetic route optimization. Each chromosome is a point ordering; selection, ordered crossover, mutation, and elitism evolve shorter tours.
+ * Page-specific layout and controls; shared theme colors are supplied by /Theme.css.
+ */
+main { max-width: 1500px; }
+.section-label { color: var(--site-accent); text-transform: uppercase; font-size: .75rem; letter-spacing: .12em; }
+.evolution-layout { display: grid; grid-template-columns: 300px minmax(0,1fr); gap: 1.5rem; align-items: start; }
+.evolution-controls,.evolution-view { padding: 1.25rem; background: var(--site-surface); border: 1px solid var(--site-border); border-radius: 12px; }
+.evolution-controls label { display: block; margin: .8rem 0 .3rem; }
+.evolution-controls input[type="range"] { display: block; width: 100%; }
+.evolution-controls output { float: right; color: var(--site-accent); }
+.evolution-actions { display: flex; gap: .5rem; flex-wrap: wrap; margin: 1rem 0; }
+.evolution-stats { display: grid; grid-template-columns: 1fr 1fr; margin: 1.5rem 0 1rem; }
+.evolution-stats dd { text-align: right; color: var(--site-accent); font-variant-numeric: tabular-nums; }
+.evolution-controls h2,.evolution-view h2 { font-size: 1rem; }
+#route-map { width: 100%; height: 50vh; min-height: 300px; display: block; }
+#fitness-chart { width: 100%; height: 140px; display: block; }
+.evolution-view h2 { border-top: 1px solid var(--site-border); padding-top: 1rem; }
+/* Stack or resize the project layout on narrower screens. */
+@media(max-width:700px) { .evolution-layout { grid-template-columns: 1fr; } }
